@@ -66,7 +66,7 @@
 <p>
   <a href="https://rudrajha.com"><img src="https://img.shields.io/badge/Website-rudrajha.com-blue?style=flat-square&logo=google-chrome"></a>
   <a href="mailto:rudrarajjha2004@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=flat-square&logo=gmail"></a>
-  <a href="https://linkedin.com/in/rudrajha"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin"></a>
+  <a href="https://www.linkedin.com/in/rudra-jha-iitg"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin"></a>
 </p>
 
 ---
