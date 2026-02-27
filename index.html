@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra Jha - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Rudra Jha</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#game" class="nav-link">Game</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Rudra Jha</span> 👋</h1>
+            <p class="hero-subtitle">Student | Aspiring Developer | Tech Enthusiast</p>
+            <p class="hero-description">Data Science • Artificial Intelligence • Game Development • Machine Learning</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#game" class="btn btn-secondary">Play Game</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">🚀 About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <ul class="about-list">
+                        <li>🎓 <strong>Student at Indian Institute of Technology, Guwahati (IITG)</strong></li>
+                        <li>🔬 Focused on <strong>Data Science</strong> and <strong>Artificial Intelligence</strong></li>
+                        <li>💡 Love combining theory with hands-on projects</li>
+                        <li>🤝 Open to collaborations and new challenges</li>
+                        <li>🌱 Always learning and curious about technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">🛠️ Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">R</div>
+                <div class="skill-badge">C++</div>
+                <div class="skill-badge">C</div>
+                <div class="skill-badge">SQL</div>
+                <div class="skill-badge">NumPy</div>
+                <div class="skill-badge">Pandas</div>
+                <div class="skill-badge">Docker</div>
+                <div class="skill-badge">Linux</div>
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">GitHub</div>
+                <div class="skill-badge">VS Code</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">📌 Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Chrome Prank Extension</h3>
+                    <p>A playful Chrome extension that displays a 💀 skull emoji whenever someone clicks a link on any webpage—perfect for harmless pranks!</p>
+                    <a href="https://github.com/Rudra-iitg/project1" class="project-link" target="_blank">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <h3>AI Research Agent</h3>
+                    <p>An AI-powered agent that can prepare a detailed research report on any topic, automating information gathering and summarization.</p>
+                    <a href="https://github.com/Rudra-iitg/project2" class="project-link" target="_blank">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="game" class="section game-section">
+        <div class="container">
+            <h2 class="section-title">🎮 Space Navigator</h2>
+            <p class="game-description">Navigate your spaceship through obstacles, collect power-ups, and achieve the highest score!</p>
+            <div class="game-container">
+                <canvas id="game-canvas"></canvas>
+                <div class="game-ui">
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="stat-label">Score:</span>
+                            <span class="stat-value" id="score">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Health:</span>
+                            <span class="stat-value" id="health">100</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Shield:</span>
+                            <span class="stat-value" id="shield">0</span>
+                        </div>
+                    </div>
+                    <div class="power-ups">
+                        <div class="power-up-indicator" id="speed-indicator">⚡ Speed: OFF</div>
+                        <div class="power-up-indicator" id="weapon-indicator">🔫 Weapon: Level 1</div>
+                    </div>
+                </div>
+                <div id="game-over" class="game-over hidden">
+                    <h3>Game Over!</h3>
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="btn btn-primary">Play Again</button>
+                </div>
+                <div id="game-start" class="game-start">
+                    <h3>Space Navigator</h3>
+                    <p>Use Arrow Keys or WASD to move</p>
+                    <p>Navigate through walls and collect power-ups!</p>
+                    <button id="start-btn" class="btn btn-primary">Start Game</button>
+                </div>
+            </div>
+            <div class="game-controls">
+                <h3>Controls:</h3>
+                <ul>
+                    <li><strong>↑/W</strong> - Move Up</li>
+                    <li><strong>↓/S</strong> - Move Down</li>
+                    <li><strong>←/A</strong> - Move Left</li>
+                    <li><strong>→/D</strong> - Move Right</li>
+                    <li><strong>Space</strong> - Fire (with weapon upgrade)</li>
+                </ul>
+                <h3>Power-ups:</h3>
+                <ul>
+                    <li><strong>🛡️ Shield</strong> - Protects from damage</li>
+                    <li><strong>⚡ Speed Boost</strong> - Increases movement speed</li>
+                    <li><strong>🔫 Weapon Upgrade</strong> - Enables shooting obstacles</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">📫 Connect With Me</h2>
+            <div class="contact-links">
+                <a href="https://rudrajha.com" class="contact-btn" target="_blank">
+                    🌐 Website
+                </a>
+                <a href="mailto:rudrarajjha2004@gmail.com" class="contact-btn">
+                    📧 Email
+                </a>
+                <a href="https://www.linkedin.com/in/rudra-jha-iitg" class="contact-btn" target="_blank">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Thanks for visiting! Feel free to reach out to collaborate on exciting projects. 😊</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js"></script>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
